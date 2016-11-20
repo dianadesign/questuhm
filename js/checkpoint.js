@@ -13,7 +13,7 @@ $(document).ready(function() {
     svar_two:'A type of programming using only numbers',
     svar_three:'A type of programming involving a structured method of creating programs',
     svar_four:'A type of programming not in use anymore',
-    correct: self.var_one,
+    //correct: self.var_one,
     adresa: 'Calea Rahovei 198A, București'
   };
 
@@ -22,8 +22,8 @@ $(document).ready(function() {
     failvar_one:'A compiler',
     failvar_two:'An algorithm',
     failvar_three:'A class',
-    failvar_four:'PHP',
-    failcorrect: self.failvar_two,
+    failvar_four:'PHP'
+    //failcorrect: self.failvar_two,
   }
 
   var chkpoint_two = {
@@ -35,7 +35,7 @@ $(document).ready(function() {
     var_two:'Javascript',
     var_three:'C++',
     var_four:'PHP',
-    correct: self.var_three,
+    //correct: self.var_three,
     adresa: 'Strada Uranus 150, București'
   };
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
     var_two:'Loop',
     var_three:'Conditional',
     var_four:'Compiler',
-    correct: self.var_two,
+    //correct: self.var_two,
     adresa: 'Calea Rahovei 147-153, București'
   };
 
@@ -61,7 +61,7 @@ $(document).ready(function() {
     var_two:'Speeding up your computer',
     var_three:'Telling the computer what to do through a special set of instructions',
     var_four:'Convincing the computer to never freeze',
-    correct: self.var_three,
+    //correct: self.var_three,
     adresa: 'Strada Izvor 2-4, București'
   };
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
     var_two:'Variables can be declared only in software languages',
     var_three:'The value of a constant doesn`t change, the value of a variable can change all throughout a program',
     var_four:'No difference',
-    correct: self.var_three,
+    //correct: self.var_three,
     adresa: 'Calea 13 Septembrie 90, București'
   };
 
@@ -88,8 +88,7 @@ $(document).ready(function() {
     svar_one: '',
     svar_two: '',
     svar_three: '',
-    svar_four:'',
-    correct:''
+    svar_four:''
   }
 
 
@@ -168,15 +167,33 @@ console.log(chkobj.svar_one);
       $('.chk-title').html(chkobj.title);
       $('.chk-address').html(chkobj.address);
       $('.question').html(chkobj.question_title);
-      $('.svar-one p').html(chkobj.svar_one);
+      $('.svar-one').html(chkobj.svar_one);
       $('.svar-two').html(chkobj.svar_two);
-      $('.svar-three p').html(chkobj.svar_three);
+      $('.svar-three').html(chkobj.svar_three);
       $('.svar-four').html(chkobj.svar_four);
 
 }
 
  populatePage ()
-
+console.log(chkobj.header_title);
+ function putcorrectlink () {
+     switch(chkobj.header_title) {
+       case '01':
+          $('.svar-one').attr('href', 'map.html');
+          break
+      case '02':
+         $('.svar-three').attr('href', 'map.html');
+         break
+      case '03':
+        $('.svar-two').attr('href', 'map.html');
+        break
+      case '04':
+       $('.svar-three').attr('href', 'map.html');
+       break
+     default:
+    }
+ }
+putcorrectlink ();
 
 
 })
