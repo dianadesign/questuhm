@@ -65,8 +65,9 @@ input[type=text], input[type=password] {
 .wrap-index {
   background: url(../img/mare-01.jpg);
 }
-.wrap-map {
+.wrap-map, .wrap-hooray {
   background: url(../img/mare-02.jpg);
+	overflow-y: hidden;
 }
 .logo {
 	margin-top: 20%;
@@ -126,11 +127,8 @@ input[type=text], input[type=password] {
 .smthspecial {
 	position: absolute;
     font-size: 32px;
-    width: 80%;
-    height: 50%;
-    background-color: #ffffff;
-    opacity: 0.5;
-    border-radius: 15px;
+		font-weight: 900;
+		text-transform: capitalize;
 }
 
 
