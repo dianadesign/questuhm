@@ -120,7 +120,7 @@ $(document).ready(function() {
         chkobj.svar_four = chkpoint_two.var_four;
         chkobj.correct = chkpoint_two.correct;
         break;
-    case 3:
+    case '3':
         chkobj.header_title = chkpoint_three.id;
         chkobj.title = chkpoint_three.title;
         chkobj.address = chkpoint_three.adresa;
@@ -132,7 +132,7 @@ $(document).ready(function() {
         chkobj.svar_four = chkpoint_three.var_four;
         chkobj.correct = chkpoint_three.correct;
         break;
-    case 4:
+    case '4':
         chkobj.header_title = chkpoint_four.id;
         chkobj.title = chkpoint_four.title;
         chkobj.address = chkpoint_four.adresa;
@@ -144,7 +144,7 @@ $(document).ready(function() {
         chkobj.svar_four = chkpoint_four.var_four;
         chkobj.correct = chkpoint_four.correct;
         break;
-    case 5:
+    case '5':
         chkobj.header_title = chkpoint_two.id;
         chkobj.title = chkpoint_two.title;
         chkobj.address = chkpoint_two.adresa;
@@ -168,9 +168,9 @@ console.log(chkobj.svar_one);
       $('.chk-title').html(chkobj.title);
       $('.chk-address').html(chkobj.address);
       $('.question').html(chkobj.question_title);
-      $('.svar-one').html(chkobj.svar_one);
+      $('.svar-one p').html(chkobj.svar_one);
       $('.svar-two').html(chkobj.svar_two);
-      $('.svar-three').html(chkobj.svar_three);
+      $('.svar-three p').html(chkobj.svar_three);
       $('.svar-four').html(chkobj.svar_four);
 
 }

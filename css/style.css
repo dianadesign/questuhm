@@ -54,6 +54,9 @@ input[type=text], input[type=password] {
 .p-a-5 {
   padding: 5px;
 }
+.text-purple {
+	color:#6633cc;
+}
 .wrap {
 	margin: 0 auto;
 	text-align: center;
