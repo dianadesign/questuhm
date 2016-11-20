@@ -9,10 +9,10 @@ $(document).ready(function() {
     title: 'Crystal Palace Ballrooms',
     code: 'parola1',
     question: 'What is object-oriented programming?',
-    svar_one:'A type of programming involving data types representing data structures',
-    svar_two:'A type of programming using only numbers',
-    svar_three:'A type of programming involving a structured method of creating programs',
-    svar_four:'A type of programming not in use anymore',
+    svar_one:'A type of programming involving <br/> data types representing data structures',
+    svar_two:'A type of programming using <br/>  only numbers',
+    svar_three:'A type of programming involving <br/>  a structured method of creating programs',
+    svar_four:'A type of programming not in <br/>  use anymore',
     //correct: self.var_one,
     adresa: 'Calea Rahovei 198A, București'
   };
@@ -43,7 +43,7 @@ $(document).ready(function() {
     id:'03',
     title: 'Palatul Bragadiru',
     code: 'parola3',
-    question: 'If you needed to execute some code repeatedly based on a certain condition, which of the following would you use?',
+    question: 'If you needed to execute some code <br/>  repeatedly based on a certain condition, <br/>  which of the following would you use?',
     var_one:'Variable',
     var_two:'Loop',
     var_three:'Conditional',
@@ -59,7 +59,7 @@ $(document).ready(function() {
     question: 'What is computer programming?',
     var_one:'Setting the alarm on a computer',
     var_two:'Speeding up your computer',
-    var_three:'Telling the computer what to do through a special set of instructions',
+    var_three:'Telling the computer what to do <br/>  through a special set of instructions',
     var_four:'Convincing the computer to never freeze',
     //correct: self.var_three,
     adresa: 'Strada Izvor 2-4, București'
@@ -69,10 +69,10 @@ $(document).ready(function() {
     id:'05',
     title: 'JW Marriott',
     code: 'parola5',
-    question: 'What is the difference between a variable and a constant?',
+    question: 'What is the difference between a <br/>  variable and a constant?',
     var_one:'Constants can be declared only in Java',
-    var_two:'Variables can be declared only in software languages',
-    var_three:'The value of a constant doesn`t change, the value of a variable can change all throughout a program',
+    var_two:'Variables can be declared only <br/>  in software languages',
+    var_three:'The value of a constant doesn`t change, <br/>  the value of a variable can change <br/>  all throughout a program',
     var_four:'No difference',
     //correct: self.var_three,
     adresa: 'Calea 13 Septembrie 90, București'
@@ -174,26 +174,38 @@ console.log(chkobj.svar_one);
 
 }
 
- populatePage ()
-console.log(chkobj.header_title);
+ populatePage ();
  function putcorrectlink () {
      switch(chkobj.header_title) {
        case '01':
           $('.svar-one').attr('href', 'map.html');
+          $('.svar-two, .svar-three, .svar-four').bind('click', function(){
+            $(this).removeClass('btn-purple').addClass('btn-red');
+          })
           break
       case '02':
          $('.svar-three').attr('href', 'map.html');
+         $('.svar-two, .svar-one, .svar-four').bind('click', function(){
+           $(this).removeClass('btn-purple').addClass('btn-red');
+         })
          break
       case '03':
         $('.svar-two').attr('href', 'map.html');
+        $('.svar-one, .svar-three, .svar-four').bind('click', function(){
+          $(this).removeClass('btn-purple').addClass('btn-red');
+        })
         break
       case '04':
        $('.svar-three').attr('href', 'map.html');
+       $('.svar-two, .svar-one, .svar-four').bind('click', function(){
+           $(this).removeClass('btn-purple').addClass('btn-red');
+       })
        break
      default:
     }
  }
 putcorrectlink ();
+
 
 
 })

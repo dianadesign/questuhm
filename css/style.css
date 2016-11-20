@@ -54,8 +54,15 @@ input[type=text], input[type=password] {
 .p-a-5 {
   padding: 5px;
 }
+.p-0-2 {
+	padding: 0 20px;
+}
 .text-purple {
 	color:#6633cc;
+}
+.btn-red {
+	background-color: #ae1378;
+	color: #ffffff;
 }
 .wrap {
 	margin: 0 auto;
